@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8005",
+  "expect_version": "v1",
+  "checks": [
+    {
+      "check": "health and expected model version",
+      "passed": true
+    },
+    {
+      "check": "finite non-negative ETA and prediction contract",
+      "passed": true
+    },
+    {
+      "check": "model sanity: increasing distance does not shorten ETA",
+      "passed": true
+    },
+    {
+      "check": "model sanity: heavier traffic does not shorten ETA",
+      "passed": true
+    },
+    {
+      "check": "invalid input rejected with 422",
+      "passed": true
+    },
+    {
+      "check": "batch count and order",
+      "passed": true
+    },
+    {
+      "check": "request ID round trip",
+      "passed": true
+    },
+    {
+      "check": "HTTP prediction p95 under release threshold",
+      "passed": true,
+      "p95_ms": 4.164387299533701,
+      "threshold_ms": 80,
+      "observations": 50
+    }
+  ],
+  "p95_ms": 4.164387299533701
+}

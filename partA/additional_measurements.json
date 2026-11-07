@@ -1,0 +1,127 @@
+{
+  "change": "Two Uvicorn worker processes instead of one, with the same v1 model and load client. Hypothesis: two processes can use two CPU cores.",
+  "two_workers": [
+    {
+      "concurrency": 1,
+      "requests": 1714,
+      "rps": 428.4,
+      "batch": 1,
+      "elapsed_seconds": 4.001,
+      "mean_ms": 2.3293,
+      "mean_ms_per_row": 2.329292,
+      "p50_ms": 2.0,
+      "p95_ms": 3.7,
+      "p99_ms": 5.0,
+      "errors": 0,
+      "replicas": 1,
+      "versions": {
+        "v1": 1714
+      }
+    },
+    {
+      "concurrency": 2,
+      "requests": 2754,
+      "rps": 687.7,
+      "batch": 1,
+      "elapsed_seconds": 4.005,
+      "mean_ms": 2.901,
+      "mean_ms_per_row": 2.901023,
+      "p50_ms": 2.6,
+      "p95_ms": 4.4,
+      "p99_ms": 6.2,
+      "errors": 0,
+      "replicas": 1,
+      "versions": {
+        "v1": 2754
+      }
+    },
+    {
+      "concurrency": 4,
+      "requests": 3107,
+      "rps": 774.8,
+      "batch": 1,
+      "elapsed_seconds": 4.01,
+      "mean_ms": 5.1458,
+      "mean_ms_per_row": 5.145836,
+      "p50_ms": 4.7,
+      "p95_ms": 8.1,
+      "p99_ms": 11.8,
+      "errors": 0,
+      "replicas": 1,
+      "versions": {
+        "v1": 3107
+      }
+    },
+    {
+      "concurrency": 8,
+      "requests": 2744,
+      "rps": 683.6,
+      "batch": 1,
+      "elapsed_seconds": 4.014,
+      "mean_ms": 11.6601,
+      "mean_ms_per_row": 11.660093,
+      "p50_ms": 9.9,
+      "p95_ms": 24.5,
+      "p99_ms": 31.5,
+      "errors": 0,
+      "replicas": 1,
+      "versions": {
+        "v1": 2744
+      }
+    },
+    {
+      "concurrency": 16,
+      "requests": 2398,
+      "rps": 596.6,
+      "batch": 1,
+      "elapsed_seconds": 4.019,
+      "mean_ms": 26.6121,
+      "mean_ms_per_row": 26.612134,
+      "p50_ms": 23.9,
+      "p95_ms": 48.6,
+      "p99_ms": 94.9,
+      "errors": 0,
+      "replicas": 1,
+      "versions": {
+        "v1": 2398
+      }
+    }
+  ],
+  "batching_concurrency_1": {
+    "batch_1": {
+      "concurrency": 1,
+      "requests": 1558,
+      "rps": 389.4,
+      "batch": 1,
+      "elapsed_seconds": 4.001,
+      "mean_ms": 2.5628,
+      "mean_ms_per_row": 2.56276,
+      "p50_ms": 2.3,
+      "p95_ms": 4.1,
+      "p99_ms": 6.0,
+      "errors": 0,
+      "replicas": 1,
+      "versions": {
+        "v1": 1558
+      }
+    },
+    "batch_100": {
+      "concurrency": 1,
+      "requests": 1275,
+      "rps": 318.5,
+      "batch": 100,
+      "elapsed_seconds": 4.003,
+      "mean_ms": 3.1336,
+      "mean_ms_per_row": 0.031336,
+      "p50_ms": 2.8,
+      "p95_ms": 4.8,
+      "p99_ms": 5.9,
+      "errors": 0,
+      "replicas": 1,
+      "versions": {
+        "v1": 1275
+      }
+    }
+  },
+  "load_seconds_each": 4
+}
